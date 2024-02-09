@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { DragDropContext, Droppable, Draggable, DropResult } from 'react-beautiful-dnd';
 import TodoItem from './TodoItem';
-import { getTodos, addTodo, deleteTodo, updateTodo, updateTodoOrder } from '../services/todoService';
+import { getTodos, addTodo, deleteTodo, updateTodo } from '../services/todoService';
 import Form from './Form';
 import { useNavigate } from 'react-router-dom';
 

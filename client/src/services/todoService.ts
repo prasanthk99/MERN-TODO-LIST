@@ -1,7 +1,8 @@
 // todoService.ts
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3001/api/data';
+const apiUrl = process.env.REACT_APP_API_URL;
+const API_BASE_URL = `${apiUrl}`;
 
 export const getTodos = async () => {
   const response = await axios.get(API_BASE_URL);
@@ -23,15 +24,15 @@ export const deleteTodo = async (id: string) => {
   return response.data;
 };
 
-export const updateTodoOrder = async (updatedTodoOrder: string[]) => {
-  try {
-    // Call your API to update the todos order on the server
-    // Example API call (replace with your actual API endpoint)
-    await axios.put('http://localhost:3001/api/todos/order', { todoIds: updatedTodoOrder });
+// export const updateTodoOrder = async (updatedTodoOrder: string[]) => {
+//   try {
+//     // Call your API to update the todos order on the server
+//     // Example API call (replace with your actual API endpoint)
+//     await axios.put('http://localhost:3001/api/todos/order', { todoIds: updatedTodoOrder });
 
-    console.log('Todos order updated on the server');
-  } catch (error) {
-    console.error('Error updating todos order on the server', error);
-    throw error; // Propagate the error for further handling, if needed
-  }
-};
+//     console.log('Todos order updated on the server');
+//   } catch (error) {
+//     console.error('Error updating todos order on the server', error);
+//     throw error; // Propagate the error for further handling, if needed
+//   }
+// };

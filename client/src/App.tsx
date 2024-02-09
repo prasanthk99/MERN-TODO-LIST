@@ -17,6 +17,7 @@ function App(): JSX.Element {
             {/* <Route index element={<TodoList token={token}/>} /> */}
             <Route index element={<LoginForm setToken={setToken} />} />
             <Route path="signup" element={<SignupForm />} />
+            {/* <Route path="*" element={<NoPage />} /> */}
           </Route>
         </Routes>
       </div>
