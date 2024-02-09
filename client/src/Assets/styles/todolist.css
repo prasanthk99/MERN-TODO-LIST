@@ -1,0 +1,13 @@
+.todo-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+    background-color: aliceblue;
+    padding: 10px;
+    margin:10px auto;
+}
+
+.todo-item button{
+    margin: 0 4px;
+}
